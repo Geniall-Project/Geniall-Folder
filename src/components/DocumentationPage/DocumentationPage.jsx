@@ -34,14 +34,11 @@ const documentationSections = [
   }
 ]
 
-function DocumentationPage({ onNavigate }) {
+function DocumentationPage() {
   return (
     <Background>
       <div className="documentation-page">
         <div className="documentation-container">
-        <button className="back-button" onClick={() => onNavigate('home')}>
-          ← Voltar
-        </button>
         
         <h1 className="documentation-title">Documentação</h1>
         <p className="documentation-subtitle">Acesse todas as informações do projeto</p>
