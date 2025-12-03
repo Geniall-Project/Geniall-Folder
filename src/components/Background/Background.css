@@ -1,0 +1,32 @@
+.screen-background {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  background-color: var(--geniall-bg-color);
+  overflow-x: hidden;
+  /* border: 4px solid #ff0080; ROSA - Background */
+}
+
+.animated-mural {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/bg-geniall.svg");
+  animation: scrollMural 5000s linear infinite;
+  z-index: 0;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+@keyframes scrollMural {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100000px 0;
+  }
+}

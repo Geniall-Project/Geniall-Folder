@@ -1,0 +1,297 @@
+.team-page {
+  min-height: 100vh;
+  position: relative;
+  padding: 0.5rem 4rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-container {
+  max-width: 1200px;
+  border-radius: 10px;
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 1rem;
+  z-index: 1;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 3rem;
+  align-items: center;
+}
+
+.back-button {
+  background: var(--geniall-screen-color);
+  border: 2px solid var(--geniall-primary-dark);
+  border-radius: 6px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--geniall-text-white);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0.5rem;
+  left: 13%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.back-button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: var(--geniall-primary-dark);
+  color: var(--geniall-text-white);
+}
+
+.team-title {
+  font-size: 2rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  font-weight: 800;
+}
+
+.team-subtitle {
+  font-size: 1.1rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: white;
+  border-radius: 10px;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex: 1;
+  overflow: hidden;
+  padding: 0 1rem;
+  width: 100%;
+  justify-items: center;
+}
+
+.team-card {
+  background: var(--geniall-screen-color);
+  border: 3px solid var(--geniall-primary-dark);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 280px;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: var(--geniall-accent-yellow);
+}
+
+.team-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--geniall-bg-color);
+  color: var(--geniall-text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 auto 0.75rem;
+  border: 3px solid var(--geniall-primary-dark);
+}
+
+.team-name {
+  font-size: 1.1rem;
+  color: var(--geniall-text-white);
+  margin: 0.25rem 0;
+  font-weight: 700;
+}
+
+.team-role {
+  font-size: 0.9rem;
+  color: var(--geniall-text-white);
+  margin: 0.25rem 0 0.75rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.team-linkedin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--geniall-primary-dark);
+  color: var(--geniall-text-white);
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  width: 60%;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  margin-top: auto;
+  align-self: center;
+  border: 2px solid var(--geniall-primary-dark);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.team-linkedin:hover {
+  background: var(--geniall-accent-yellow);
+  color: var(--geniall-primary-dark);
+  border-color: var(--geniall-accent-yellow);
+  box-shadow: 0 4px 10px rgba(254, 207, 69, 0.4);
+}
+
+.linkedin-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+@media (max-width: 968px) {
+  .team-page {
+    padding: 0.5rem 2rem;
+  }
+
+  .team-container {
+    padding-top: 2.5rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 0.5rem;
+    justify-items: center;
+  }
+
+  .team-title {
+    font-size: 1.75rem;
+  }
+
+  .team-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .team-page {
+    padding: 0.5rem 1rem;
+  }
+
+  .team-container {
+    padding-top: 2rem;
+  }
+
+  .back-button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    top: 0.25rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0;
+    margin-top: 1rem;
+    justify-items: center;
+  }
+
+  .team-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .team-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .team-card {
+    padding: 1.25rem;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .team-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .team-name {
+    font-size: 1rem;
+  }
+
+  .team-role {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .team-linkedin {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .linkedin-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-page {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .team-title {
+    font-size: 1.25rem;
+  }
+
+  .team-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .team-card {
+    padding: 1rem;
+  }
+
+  .team-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .team-name {
+    font-size: 0.95rem;
+  }
+
+  .team-role {
+    font-size: 0.8rem;
+  }
+
+  .team-linkedin {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8rem;
+  }
+}

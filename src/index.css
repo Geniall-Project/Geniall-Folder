@@ -1,0 +1,55 @@
+:root {
+  /* Cores GeniALL - Azul */
+  --geniall-bg-color: #87CEEB;
+  --geniall-screen-color: #6BB6D6;
+  --geniall-game-color: #4A90E2;
+  --geniall-primary-dark: #1E2C47;
+  --geniall-accent-yellow: #FECF45;
+  --geniall-text-white: #FFFFFF;
+  --geniall-text-dark: #1E2C47;
+  --geniall-text-light: #666666;
+  
+  /* Cores planas para elementos */
+  --geniall-blue: #4A90E2;
+  --geniall-green: #48D880;
+  
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+::selection {
+  background: rgba(92, 96, 98, 0.3);
+  color: inherit;
+}

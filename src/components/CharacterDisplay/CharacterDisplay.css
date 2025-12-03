@@ -1,0 +1,65 @@
+.character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  z-index: 10;
+  border: 3px solid #ff8800; /* LARANJA - Character container */
+}
+
+@media (max-width: 640px) {
+  .character {
+    max-width: 80%;
+  }
+  
+  #character-body img,
+  #character-head img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .character {
+    max-width: 70%;
+  }
+}
+
+#character-body img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #ff8800; /* LARANJA - Body */
+}
+
+#character-head img {
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  position: relative;
+  margin-bottom: -51%;
+  top: 100%;
+  animation: headSwing 2s ease-in-out infinite;
+  transform-origin: center bottom;
+  border: 2px solid #ff8800; /* LARANJA - Head */
+}
+
+@keyframes headSwing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+

@@ -1,0 +1,277 @@
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  z-index: 1;
+  border: 3px solid #ff0000; /* VERMELHO - Container principal */
+}
+
+.home-content {
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 3rem;
+  border: 2px solid #0000ff; /* AZUL - Container de conteúdo */
+}
+
+.home-left {
+  flex: 1;
+  max-width: 600px;
+  border: 2px solid #00ffff; /* CIANO - Seção esquerda */
+}
+
+.home-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  border: 2px solid #00ffff; /* CIANO - Seção direita */
+}
+
+.home-header {
+  margin-bottom: 3rem;
+  border: 2px solid #ff00ff; /* MAGENTA - Header */
+}
+
+.home-logo {
+  width: 100%;
+  max-width: 300px;
+  align-self: center;
+  height: auto;
+  margin-bottom: 1.5rem;
+  display: block;
+  border: 2px solid #ff8800; /* LARANJA - Logo */
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  border: 2px solid #ff00ff; /* MAGENTA - Subtítulo */
+}
+
+.home-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 2px solid #00ffff; /* CIANO - Container de opções */
+  width: 100%;
+}
+
+.home-option-card {
+  background: var(--geniall-screen-color);
+  border: 3px solid var(--geniall-primary-dark);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--geniall-text-white);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  outline: 2px solid #00ff00; /* VERDE - Card de opção */
+  width: 100%;
+  height: 140px;
+  min-height: 140px;
+  max-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+}
+
+.team-card,
+.doc-card {
+  background: var(--geniall-screen-color) !important;
+  color: var(--geniall-text-white) !important;
+  border-color: var(--geniall-primary-dark) !important;
+  width: 100% !important;
+  height: 140px !important;
+  min-height: 140px !important;
+  max-height: 140px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.home-option-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(33, 37, 49, 0.15);
+}
+
+.home-option-card:active {
+  transform: translateY(-1px);
+}
+
+.home-option-card h2 {
+  font-size: 1.5rem;
+  margin: 0 auto 0.5rem auto;
+  padding: 0;
+  font-weight: 700;
+  text-align: center !important;
+  width: 100%;
+  display: block;
+  flex-shrink: 0;
+  border: 1px solid #ff00ff; /* MAGENTA - Título do card */
+}
+
+.home-option-card p {
+  font-size: 0.95rem;
+  margin: 0 auto;
+  padding: 0;
+  font-weight: 400;
+  opacity: 0.9;
+  text-align: center !important;
+  width: 100%;
+  display: block;
+  flex-shrink: 0;
+  border: 1px solid #ff00ff; /* MAGENTA - Texto do card */
+}
+
+@media (max-width: 968px) {
+  .home-page {
+    padding: 1.5rem;
+  }
+
+  .home-content {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .home-left {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .home-right {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .home-options {
+    gap: 1rem;
+  }
+
+  .home-logo {
+    max-width: 250px;
+  }
+
+  .home-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-page {
+    padding: 1rem;
+    min-height: 100vh;
+  }
+
+  .home-content {
+    gap: 1.5rem;
+  }
+
+  .home-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .home-logo {
+    max-width: 200px;
+    margin: 0 auto 1rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-options {
+    gap: 1rem;
+  }
+
+  .home-option-card {
+    padding: 1rem 1.5rem;
+    height: 120px;
+    min-height: 120px;
+    max-height: 120px;
+  }
+
+  .team-card,
+  .doc-card {
+    height: 120px !important;
+    min-height: 120px !important;
+    max-height: 120px !important;
+  }
+
+  .home-option-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .home-option-card p {
+    font-size: 0.9rem;
+  }
+
+  .home-right {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page {
+    padding: 0.75rem;
+  }
+
+  .home-logo {
+    max-width: 180px;
+  }
+
+  .home-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .home-option-card {
+    padding: 0.75rem 1.25rem;
+    height: 110px;
+    min-height: 110px;
+    max-height: 110px;
+  }
+
+  .team-card,
+  .doc-card {
+    height: 110px !important;
+    min-height: 110px !important;
+    max-height: 110px !important;
+  }
+
+  .home-option-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .home-option-card p {
+    font-size: 0.85rem;
+  }
+
+  .home-right {
+    max-width: 200px;
+  }
+}
