@@ -1,32 +1,23 @@
-import { useState } from 'react'
-import HomePage from './components/HomePage/HomePage'
-import TeamPage from './components/TeamPage/TeamPage'
-import DocumentationPage from './components/DocumentationPage/DocumentationPage'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./components/HomePage/HomePage";
+import TeamPage from "./components/TeamPage/TeamPage";
+import DocumentationPage from "./components/DocumentationPage/DocumentationPage";
+import Header from "./components/Header/Header";
+import "./App.css";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home')
-
-  const handleNavigate = (page) => {
-    setCurrentPage(page)
-  }
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'team':
-        return <TeamPage onNavigate={handleNavigate} />
-      case 'documentation':
-        return <DocumentationPage onNavigate={handleNavigate} />
-      default:
-        return <HomePage onNavigate={handleNavigate} />
-    }
-  }
-
   return (
-    <div className="app">
-      {renderPage()}
-    </div>
-  )
+    <Router>
+      <div className="app">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/team" element={<TeamPage />} />
+          <Route path="/documentation" element={<DocumentationPage />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

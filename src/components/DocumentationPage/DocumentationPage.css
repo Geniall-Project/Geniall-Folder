@@ -1,210 +1,179 @@
 .documentation-page {
   min-height: 100vh;
   position: relative;
-  padding: 2rem;
+  padding: 0.5rem 4rem;
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 1;
-  border: 3px solid #ff0000; /* VERMELHO - Container principal */
+  display: flex;
+  flex-direction: column;
 }
 
 .documentation-container {
-  max-width: 900px;
+  max-width: 1200px;
+  border-radius: 10px;
+  background-color: white;
+  width: 100%;
   margin: 0 auto;
   position: relative;
+  padding: 3rem 1rem;
+  padding-bottom: 3rem;
   z-index: 1;
-  padding-top: 1rem;
-  border: 2px solid #0000ff; /* AZUL - Container secundário */
-}
-
-.back-button {
-  background: var(--geniall-screen-color);
-  border: 3px solid var(--geniall-primary-dark);
-  border-radius: 8px;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--geniall-text-white);
-  cursor: pointer;
-  margin-bottom: 2rem;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  outline: 2px solid #ffff00; /* AMARELO - Botão */
-}
-
-.back-button:hover {
-  transform: translateX(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  background: var(--geniall-primary-dark);
-  color: var(--geniall-text-white);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid var(--geniall-primary-dark);
 }
 
 .documentation-title {
-  font-size: 2.5rem;
-  color: var(--geniall-text-white);
+  font-size: 2rem;
+  color: #000000;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   font-weight: 800;
-  border: 2px solid #ff00ff; /* MAGENTA - Título */
 }
 
 .documentation-subtitle {
-  font-size: 1.2rem;
-  color: var(--geniall-text-white);
+  font-size: 1.1rem;
+  color: #000000;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   font-weight: 500;
   opacity: 0.9;
-  border: 2px solid #ff00ff; /* MAGENTA - Subtítulo */
 }
 
 .documentation-content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  border: 2px solid #00ffff; /* CIANO - Container de conteúdo */
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .documentation-section {
   background: var(--geniall-screen-color);
   border: 3px solid var(--geniall-primary-dark);
-  border-radius: 15px;
-  padding: 2rem;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
-  outline: 2px solid #00ff00; /* VERDE - Seção */
+  width: 100%;
 }
 
 .documentation-section:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   border-color: var(--geniall-accent-yellow);
 }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--geniall-text-white);
-  margin: 0 0 1rem 0;
+  margin: 0.5rem 0;
   font-weight: 700;
-  border-bottom: 3px solid var(--geniall-accent-yellow);
-  padding-bottom: 0.5rem;
-  outline: 1px solid #ff00ff; /* MAGENTA - Título da seção */
 }
 
 .section-content {
   font-size: 1rem;
   color: var(--geniall-text-white);
   line-height: 1.6;
-  margin: 0;
-  font-weight: 400;
+  margin: 0.5rem 0 1rem;
+  font-weight: 500;
   opacity: 0.9;
-  border: 1px solid #ff00ff; /* MAGENTA - Conteúdo da seção */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: justify;
 }
 
 @media (max-width: 968px) {
   .documentation-page {
-    padding: 1.5rem;
+    padding: 0.5rem 2rem;
   }
-  
+
   .documentation-container {
-    padding-top: 0.5rem;
+    padding: 2.5rem 1rem;
+    padding-bottom: 2.5rem;
+    justify-content: flex-start;
   }
-  
+
   .documentation-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
-  
+
   .documentation-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .documentation-section {
-    padding: 1.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 640px) {
   .documentation-page {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
   }
-  
+
   .documentation-container {
-    padding: 0;
+    padding: 2rem 1rem;
+    padding-bottom: 2rem;
+    justify-content: flex-start;
   }
-  
-  .back-button {
-    padding: 0.6rem 1.2rem;
+
+  .documentation-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .documentation-subtitle {
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
   }
-  
-  .documentation-title {
-    font-size: 1.75rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .documentation-subtitle {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-  
+
   .documentation-content {
-    gap: 1.25rem;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
   }
-  
+
   .documentation-section {
-    padding: 1.25rem;
-    border-radius: 10px;
+    padding: 1.5rem 1.25rem;
   }
-  
+
   .section-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.4rem;
+    font-size: 1rem;
   }
-  
+
   .section-content {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .documentation-page {
-    padding: 0.75rem;
+    padding: 0.5rem 0.75rem;
   }
-  
-  .back-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-  }
-  
+
   .documentation-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
-  
+
   .documentation-subtitle {
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
   }
-  
-  .documentation-content {
-    gap: 1rem;
-  }
-  
+
   .documentation-section {
-    padding: 1rem;
-    border-width: 2px;
+    padding: 1.25rem 1rem;
   }
-  
+
   .section-title {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
   }
-  
+
   .section-content {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
-

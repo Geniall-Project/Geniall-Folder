@@ -1,21 +1,21 @@
 :root {
   /* Cores GeniALL - Azul */
-  --geniall-bg-color: #87CEEB;
-  --geniall-screen-color: #6BB6D6;
-  --geniall-game-color: #4A90E2;
-  --geniall-primary-dark: #1E2C47;
-  --geniall-accent-yellow: #FECF45;
-  --geniall-text-white: #FFFFFF;
-  --geniall-text-dark: #1E2C47;
+  --geniall-bg-color: #87ceeb;
+  --geniall-screen-color: #6bb6d6;
+  --geniall-game-color: #4a90e2;
+  --geniall-primary-dark: #1e2c47;
+  --geniall-accent-yellow: #fecf45;
+  --geniall-text-white: #ffffff;
+  --geniall-text-dark: #1e2c47;
   --geniall-text-light: #666666;
-  
+
   /* Cores planas para elementos */
-  --geniall-blue: #4A90E2;
-  --geniall-green: #48D880;
-  
-  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  --geniall-blue: #4a90e2;
+  --geniall-green: #48d880;
+
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

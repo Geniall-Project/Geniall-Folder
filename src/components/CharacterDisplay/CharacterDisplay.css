@@ -7,14 +7,22 @@
   max-width: 100%;
   height: auto;
   z-index: 10;
-  border: 3px solid #ff8800; /* LARANJA - Character container */
+  /* border: 3px solid #ff8800; LARANJA - Character container */
+}
+
+.character.changing {
+  animation: fadeOutScale 0.6s ease-in-out forwards;
+}
+
+.character:not(.changing) {
+  animation: fadeInScale 0.6s ease-in-out forwards;
 }
 
 @media (max-width: 640px) {
   .character {
     max-width: 80%;
   }
-  
+
   #character-body img,
   #character-head img {
     max-width: 100%;
@@ -27,10 +35,20 @@
   }
 }
 
+#character-body {
+  position: relative;
+  z-index: 1;
+}
+
 #character-body img {
   width: 100%;
   height: auto;
-  border: 2px solid #ff8800; /* LARANJA - Body */
+  /* border: 2px solid #ff8800; LARANJA - Body */
+}
+
+#character-head {
+  position: relative;
+  z-index: 2;
 }
 
 #character-head img {
@@ -40,9 +58,9 @@
   position: relative;
   margin-bottom: -51%;
   top: 100%;
-  animation: headSwing 2s ease-in-out infinite;
   transform-origin: center bottom;
-  border: 2px solid #ff8800; /* LARANJA - Head */
+  /* border: 2px solid #ff8800; LARANJA - Head */
+  animation: headSwing 2s ease-in-out infinite;
 }
 
 @keyframes headSwing {
@@ -63,3 +81,24 @@
   }
 }
 
+@keyframes fadeOutScale {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

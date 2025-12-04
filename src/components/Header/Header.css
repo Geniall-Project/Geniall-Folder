@@ -1,0 +1,100 @@
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  background: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 1.5rem 2rem;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.header-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  border-radius: 8px;
+  pointer-events: auto;
+}
+
+.header-button:hover {
+  transform: scale(1.1);
+}
+
+.header-button:active {
+  transform: scale(0.95);
+}
+
+.header-icon {
+  width: 70px;
+  height: 70px;
+  filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25));
+}
+
+.header-back {
+  position: absolute;
+  left: 2rem;
+  top: 1.5rem;
+}
+
+.header-sound {
+  margin-right: 0;
+}
+
+@media (max-width: 968px) {
+  .app-header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .header-back {
+    left: 1.5rem;
+    top: 1.25rem;
+  }
+
+  .header-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .header-back {
+    left: 1.25rem;
+    top: 1rem;
+  }
+
+  .header-icon {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .header-back {
+    left: 1rem;
+    top: 0.75rem;
+  }
+
+  .header-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
