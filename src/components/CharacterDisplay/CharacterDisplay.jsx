@@ -64,20 +64,22 @@ function CharacterDisplay() {
   }, []);
 
   return (
-    <div className={`character ${isChanging ? "changing" : ""}`}>
-      <div id="character-head">
-        <img
-          src={`/assets/characters/head/${character}-head.svg`}
-          alt="head"
-          key={`head-${character}`}
-        />
-      </div>
-      <div id="character-body">
-        <img
-          src={`/assets/characters/body/${character}-body.svg`}
-          alt="body"
-          key={`body-${character}`}
-        />
+    <div className="character">
+      <div className={`character-inner ${isChanging ? "changing" : ""}`}>
+        <div id="character-head">
+          <img
+            src={`/assets/characters/head/${character}-head.svg`}
+            alt="head"
+            key={`head-${character}`}
+          />
+        </div>
+        <div id="character-body">
+          <img
+            src={`/assets/characters/body/${character}-body.svg`}
+            alt="body"
+            key={`body-${character}`}
+          />
+        </div>
       </div>
     </div>
   );
