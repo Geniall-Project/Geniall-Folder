@@ -6,6 +6,9 @@
   position: relative;
   padding: 2rem;
   z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
   /* border: 3px solid #ff0000; VERMELHO - Container principal */
 }
 
@@ -18,8 +21,11 @@
   justify-content: center;
   max-width: 1200px;
   width: 100%;
+  max-height: 700px;
   gap: 3rem;
   border: 5px solid var(--geniall-primary-dark);
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .home-left {
@@ -34,6 +40,7 @@
   justify-content: center;
   align-items: center;
   max-width: 400px;
+  transform: translateY(20px);
   /* border: 2px solid #00ffff; CIANO - Seção direita */
 }
 
@@ -158,6 +165,8 @@
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+    padding: 40px 30px;
+    max-width: 90%;
   }
 
   .home-left {
@@ -185,83 +194,120 @@
 
 @media (max-width: 640px) {
   .home-page {
-    padding: 1rem;
+    padding: 0.5rem;
     min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .home-content {
-    gap: 1.5rem;
+    gap: 1rem;
+    padding: 20px 15px;
+    max-width: 95%;
+    max-height: calc(100vh - 1rem);
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .home-header {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
   }
 
   .home-logo {
-    max-width: 200px;
-    margin: 0 auto 1rem;
+    max-width: 150px;
+    margin: 0 auto 0.5rem;
   }
 
   .home-subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .home-options {
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .home-option-card {
-    padding: 1rem 1.5rem;
-    height: 120px !important;
-    min-height: 120px !important;
-    max-height: 120px !important;
+    padding: 0.75rem 1rem;
+    height: 90px !important;
+    min-height: 90px !important;
+    max-height: 90px !important;
   }
 
   .home-option-card h2 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
   }
 
   .home-option-card p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .home-right {
-    max-width: 250px;
+    max-width: 200px;
   }
 }
 
 @media (max-width: 480px) {
   .home-page {
-    padding: 0.75rem;
+    padding: 0.5rem;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .home-content {
+    gap: 0.75rem;
+    padding: 15px 12px;
+    max-width: 98%;
+    max-height: calc(100vh - 1rem);
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .home-header {
+    margin-bottom: 0.75rem;
   }
 
   .home-logo {
-    max-width: 180px;
+    max-width: 130px;
+    margin: 0 auto 0.4rem;
   }
 
   .home-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .home-options {
+    gap: 0.6rem;
   }
 
   .home-option-card {
-    padding: 0.75rem 1.25rem;
-    height: 110px !important;
-    min-height: 110px !important;
-    max-height: 110px !important;
+    padding: 0.6rem 0.9rem;
+    height: 80px !important;
+    min-height: 80px !important;
+    max-height: 80px !important;
   }
 
   .home-option-card h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
   }
 
   .home-option-card p {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
 
   .home-right {
-    max-width: 200px;
+    max-width: 180px;
   }
 }

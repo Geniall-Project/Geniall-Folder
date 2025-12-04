@@ -24,6 +24,15 @@
   transition: transform 0.2s ease;
   border-radius: 8px;
   pointer-events: auto;
+  outline: none;
+}
+
+.header-button:focus {
+  outline: none;
+}
+
+.header-button:focus-visible {
+  outline: none;
 }
 
 .header-button:hover {
